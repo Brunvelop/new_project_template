@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>my-project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-brand">my-project</a>
+      <ul class="nav-links">
+        <li><a href="/about">About</a></li>
+        <li><a href="/functions">Functions</a></li>
+        <li><a href="/docs">API Docs</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">✨ Built with Refract</div>
+        <h1>Welcome to <span>my-project</span></h1>
+        <p>Your project is running. Start building by adding functions in <code>my_project/core/</code>.</p>
+        <div class="btn-group">
+          <a href="/functions" class="btn btn-primary">⚡ Functions UI</a>
+          <a href="/docs" class="btn btn-outline">📖 API Docs</a>
+          <a href="/about" class="btn btn-outline">ℹ️ About</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="links-section">
+      <div class="container">
+        <div class="links-grid">
+          <a href="/functions" class="link-card">
+            <div class="icon">⚡</div>
+            <div class="title">Functions</div>
+            <div class="desc">Auto-generated UI for every registered function</div>
+          </a>
+          <a href="/docs" class="link-card">
+            <div class="icon">📖</div>
+            <div class="title">API Docs</div>
+            <div class="desc">Interactive Swagger / OpenAPI documentation</div>
+          </a>
+          <a href="/health" class="link-card">
+            <div class="icon">💚</div>
+            <div class="title">Health</div>
+            <div class="desc">Server health status and function count</div>
+          </a>
+          <a href="/about" class="link-card">
+            <div class="icon">ℹ️</div>
+            <div class="title">About</div>
+            <div class="desc">About this project</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      my-project · powered by <a href="https://github.com/Brunvelop/refract" style="color:var(--accent2)">Refract</a>
+    </div>
+  </footer>
+
+</body>
+</html>

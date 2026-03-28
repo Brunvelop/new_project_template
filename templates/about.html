@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About · my-project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-brand">my-project</a>
+      <ul class="nav-links">
+        <li><a href="/about">About</a></li>
+        <li><a href="/functions">Functions</a></li>
+        <li><a href="/docs">API Docs</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>About</h1>
+      <p>About this project</p>
+    </div>
+
+    <div class="content-section">
+      <h2>What is this?</h2>
+      <p>
+        This is <strong>my-project</strong> — describe your project here.
+        Built with <a href="https://github.com/Brunvelop/refract" style="color:var(--accent2)">Refract</a>,
+        which gives you a REST API, CLI, MCP tools, and a Web UI from a single Python function.
+      </p>
+
+      <h2>How to add a function</h2>
+      <p>
+        Create a function in <code>my_project/core/</code>, decorate it with
+        <code>@register_function</code>, and it automatically appears in the API,
+        CLI, and Web UI — no extra wiring needed.
+      </p>
+
+      <h2>Links</h2>
+      <p>
+        <a href="https://github.com/Brunvelop/refract" style="color:var(--accent2)">Refract on GitHub</a>
+        ·
+        <a href="https://github.com/Brunvelop/autocode" style="color:var(--accent2)">Autocode on GitHub</a>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      my-project · powered by <a href="https://github.com/Brunvelop/refract" style="color:var(--accent2)">Refract</a>
+    </div>
+  </footer>
+
+</body>
+</html>
