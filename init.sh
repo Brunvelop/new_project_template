@@ -57,8 +57,8 @@ FILES=$(find . \
   -not -name 'init.sh' \
   -type f \
   \( -name "*.py" -o -name "*.toml" -o -name "*.html" -o -name "*.css" \
-     -o -name "*.md" -o -name "*.txt" -o -name "*.json" -o -name "*.yaml" \
-     -o -name "*.yml" -o -name "*.cfg" -o -name "*.ini" \))
+     -o -name "*.js" -o -name "*.md" -o -name "*.txt" -o -name "*.json" \
+     -o -name "*.yaml" -o -name "*.yml" -o -name "*.cfg" -o -name "*.ini" \))
 
 for FILE in $FILES; do
   if grep -qE "my_project|my-project" "$FILE" 2>/dev/null; then
