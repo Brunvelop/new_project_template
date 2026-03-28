@@ -13,7 +13,8 @@
 #   2. Replaces all references to  my_project / my-project  in every file
 #   3. Resets git history (rm -rf .git + git init + first commit)
 #   4. Runs uv sync
-#   5. Self-deletes
+#   5. Activates the virtual environment
+#   6. Self-deletes
 # ─────────────────────────────────────────────────────────────────────────────
 set -euo pipefail
 
@@ -95,8 +96,15 @@ echo ""
 echo "─────────────────────────────────────────────────"
 echo "✅  ${PROJECT_KEBAB} is ready!"
 echo ""
-echo "   uv run ${PROJECT_KEBAB} serve    → http://localhost:8000"
-echo "   uv run ${PROJECT_KEBAB} list     → list registered functions"
-echo "   uv run autocode serve            → autocode dashboard"
+echo "Activate the virtual environment:"
+echo ""
+echo "   source .venv/bin/activate"
+echo ""
+echo "Then run:"
+echo ""
+echo "   ${PROJECT_KEBAB} serve            →  http://localhost:8000"
+echo "   ${PROJECT_KEBAB} list             →  list registered functions"
+echo "   autocode serve --port 8001        →  http://localhost:8001"
+echo "   autocode health-check             →  code quality gates"
 echo "─────────────────────────────────────────────────"
 echo ""

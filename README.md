@@ -8,18 +8,20 @@
 
 ```bash
 # 1. Clone (without fork history)
-git clone https://github.com/YOUR_USER/new_project_template.git my_project
+git clone https://github.com/Brunvelop/new_project_template.git my_project
 cd my_project
 
 # 2. Initialize — renames everything, resets git, installs deps
 ./init.sh my_project
 
-# 3. Go!
-uv run my-project serve        # → http://localhost:8000
+# 3. Activate the virtual environment
+source .venv/bin/activate
+
+# 4. Go!
+my-project serve           # → http://localhost:8000
 ```
 
-> **GitHub tip:** Mark this repo as a *Template repository* (Settings → ✅ Template repository)
-> so others can click **"Use this template"** instead of fork — no fork badge on their repo.
+> **GitHub tip:** Use **"Use this template"** instead of fork — no fork badge on your repo.
 
 ---
 
@@ -70,18 +72,26 @@ No extra wiring — it automatically appears in the **API**, **CLI**, **MCP**, a
 
 ---
 
-## 🛠 Available commands
+## 🛠 Commands
+
+Activate the venv once per session:
 
 ```bash
-# Project server
-uv run my-project serve          # API + MCP + Web UI  →  http://localhost:8000
-uv run my-project serve-api      # REST API only
-uv run my-project serve-mcp      # MCP only
-uv run my-project list           # List all registered functions
+source .venv/bin/activate
+```
 
-# Autocode (dev tooling)
-uv run autocode serve            # Autocode dashboard  →  http://localhost:8000
-uv run autocode health-check     # Code quality gates (standalone)
+Then:
+
+```bash
+# Project (port 8000)
+my-project serve          # API + MCP + Web UI  →  http://localhost:8000
+my-project serve-api      # REST API only
+my-project serve-mcp      # MCP only
+my-project list           # List all registered functions
+
+# Autocode — dev tooling (port 8001, avoids collision)
+autocode serve --port 8001     # Autocode dashboard  →  http://localhost:8001
+autocode health-check          # Code quality gates
 
 # Advanced (uvicorn with reload)
 # Expose fastapi_app = app.api() in app.py, then:
