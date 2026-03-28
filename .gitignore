@@ -40,4 +40,4 @@ logs/
 htmlcov/
 
 # Autocode data
-autocode_data/
+.autocode/
